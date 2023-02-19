@@ -1,26 +1,22 @@
 package Types;
 
-public class GroundType extends Type{
-    public GroundType() {
-        this.typeName = "Ground";
+public class FairyType extends Type {
+    public FairyType() {
+        this.typeName = "Fairy";
     }
 
     public boolean checkEffectiveness(Type targetType){
         String otherType = targetType.getTypeName();
         switch (otherType){
-            case "Fire":
-            case "Electric":
-            case "Poison":
-            case "Rock":
-            case "Steel":
+            case "Ice":
+            case "Dragon":
+            case "Dark":
                 this.isSuperEffective = true;
                 break;
-            case "Grass":
-            case "Bug":
+            case "Fire":
+            case "Poison":
+            case "Steel":
                 this.isNotVeryEffective = true;
-                break;
-            case "Flying":
-                this.noEffect = true;
                 break;
         }
         return isSuperEffective;

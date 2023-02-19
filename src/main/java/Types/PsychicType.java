@@ -1,25 +1,22 @@
 package Types;
 
-public class GroundType extends Type{
-    public GroundType() {
-        this.typeName = "Ground";
+public class PsychicType extends Type{
+    public PsychicType() {
+        this.typeName = "Psychic";
     }
 
     public boolean checkEffectiveness(Type targetType){
         String otherType = targetType.getTypeName();
         switch (otherType){
-            case "Fire":
-            case "Electric":
+            case "Fighting":
             case "Poison":
-            case "Rock":
-            case "Steel":
                 this.isSuperEffective = true;
                 break;
-            case "Grass":
-            case "Bug":
+            case "Psychic":
+            case "Steel":
                 this.isNotVeryEffective = true;
                 break;
-            case "Flying":
+            case "Dragon":
                 this.noEffect = true;
                 break;
         }
