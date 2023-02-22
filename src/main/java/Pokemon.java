@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Pokemon {
+    private String name;
     private int maxHealth;
     private int currentHealth = maxHealth;
     private List<Type> types = new ArrayList<Type>();
