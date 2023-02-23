@@ -1,3 +1,5 @@
+package Model;
+
 import Types.Type;
 
 import java.util.ArrayList;
@@ -7,7 +9,7 @@ public class Pokemon {
     private String name;
     private int maxHealth;
     private int currentHealth = maxHealth;
-    private List<Type> types = new ArrayList<Type>();
+    private List<String> types = new ArrayList<>();
     private int defaultAttackStat;
     private int defaultDefenseStat;
     private int defaultSpAttackStat;
@@ -17,7 +19,8 @@ public class Pokemon {
     private int currentSpAttackStat = defaultSpAttackStat;
     private int currentSpDefenseStat = defaultSpDefenseStat;
 
-    public Pokemon(int maxHealth, List<Type> types, int defaultAttackStat, int defaultDefenseStat, int defaultSpAttackStat, int defaultSpDefenseStat) {
+//  Constructor
+    public Pokemon(int maxHealth, List<String> types, int defaultAttackStat, int defaultDefenseStat, int defaultSpAttackStat, int defaultSpDefenseStat) {
         this.maxHealth = maxHealth;
         this.types = types;
         this.defaultAttackStat = defaultAttackStat;
@@ -25,7 +28,59 @@ public class Pokemon {
         this.defaultSpAttackStat = defaultSpAttackStat;
         this.defaultSpDefenseStat = defaultSpDefenseStat;
     }
-//    Stat changes
+
+//    Getters/setters
+
+
+    public String getName() {
+        return name;
+    }
+
+    public int getMaxHealth() {
+        return maxHealth;
+    }
+
+    public int getCurrentHealth() {
+        return currentHealth;
+    }
+
+    public List<String> getTypes() {
+        return types;
+    }
+
+    public int getDefaultAttackStat() {
+        return defaultAttackStat;
+    }
+
+    public int getDefaultDefenseStat() {
+        return defaultDefenseStat;
+    }
+
+    public int getDefaultSpAttackStat() {
+        return defaultSpAttackStat;
+    }
+
+    public int getDefaultSpDefenseStat() {
+        return defaultSpDefenseStat;
+    }
+
+    public int getCurrentAttackStat() {
+        return currentAttackStat;
+    }
+
+    public int getCurrentDefenseStat() {
+        return currentDefenseStat;
+    }
+
+    public int getCurrentSpAttackStat() {
+        return currentSpAttackStat;
+    }
+
+    public int getCurrentSpDefenseStat() {
+        return currentSpDefenseStat;
+    }
+
+    //    Stat changes
 //    ----Stat decreases
     public int decreaseAttack(int decreaseBy){
         return this.currentAttackStat -= decreaseBy;
